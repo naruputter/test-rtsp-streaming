@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./backend/hls_output:/app/hls_output
+      - ./backend/configs:/app/configs
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: ../backend/Dockerfile # Temporary placeholder, usually you'd have a separate one
+    # Note: For production, you'd use a different Dockerfile for Next.js
+    # but for this demo, running locally is usually preferred.
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8080
+    depends_on:
+      - backend

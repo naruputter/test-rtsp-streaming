@@ -1,0 +1,19 @@
+server_addr: ":8080"
+hls_output_dir: "./hls_output"
+
+cameras:
+  - id: "demo1"
+    name: "Demo Stream (Big Buck Bunny)"
+    rtsp_url: "rtsp://adminLadmin@192.168.1.88:554/live/main"
+    enabled: true
+
+  # Add your real CCTV cameras below:
+  # - id: "cam1"
+  #   name: "Front Door"
+  #   rtsp_url: "rtsp://admin:password@192.168.1.100:554/stream1"
+  #   enabled: true
+  #
+  # - id: "cam2"
+  #   name: "Back Yard"
+  #   rtsp_url: "rtsp://admin:password@192.168.1.101:554/stream1"
+  #   enabled: false

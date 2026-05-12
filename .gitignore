@@ -1,0 +1,26 @@
+# Next.js
+frontend/.next/
+frontend/node_modules/
+frontend/.env*
+frontend/out/
+frontend/build/
+
+# Go
+backend/hls_output/
+backend/*.exe
+backend/*.exe~
+backend/*.dll
+backend/*.so
+backend/*.dylib
+backend/*.test
+backend/*.out
+backend/*.log
+backend/vendor/
+
+# IDEs and OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
